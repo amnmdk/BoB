@@ -1,0 +1,25 @@
+## Commandes à exécuter dans votre terminal SSH (Raspberry Pi)
+
+# 1. Aller dans le répertoire du projet
+cd ~/projects/bob
+
+# 2. Rendre le script exécutable
+chmod +x scripts/setup_day1.sh
+
+# 3. Exécuter l'installation complète
+./scripts/setup_day1.sh
+
+# 4. Une fois l'installation terminée, compiler le projet
+source ~/.cargo/env
+cargo build --release
+
+# 5. Tester BoB
+./target/release/bob whoami
+./target/release/bob say "Bonjour Aimane, je suis BoB, ton assistant domestique local"
+
+## En cas de problème audio
+# Vérifier les périphériques audio disponibles
+aplay -l
+
+# Ajuster le volume
+alsamixer

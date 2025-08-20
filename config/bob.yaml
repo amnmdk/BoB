@@ -1,0 +1,21 @@
+piper_bin: "/home/bob/bin/piper/piper"
+active_profile: "aimane"
+profiles:
+  - name: "aimane"
+    color: "#E53935"
+    voice_path: "/home/bob/bin/piper/voices/fr_FR-mls_1840-medium.onnx"
+    voice_config: "/home/bob/bin/piper/voices/fr_FR-mls_1840-medium.onnx.json"
+    default_volume: 60
+    personality:
+      professional_vs_relaxed: 0.4
+      funny_vs_serious: 0.6
+      fast_vs_slow: 0.7
+  - name: "bob"
+    color: "#1976D2"
+    voice_path: "/home/bob/bin/piper/voices/fr_FR-mls_1840-medium.onnx"
+    voice_config: "/home/bob/bin/piper/voices/fr_FR-mls_1840-medium.onnx.json"
+    default_volume: 70
+    personality:
+      professional_vs_relaxed: 0.6
+      funny_vs_serious: 0.5
+      fast_vs_slow: 0.6
