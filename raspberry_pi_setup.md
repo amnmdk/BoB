@@ -5,9 +5,9 @@ Une fois le repo GitHub créé, voici les étapes pour installer BoB sur votre R
 ## 1. Sur votre Raspberry Pi (dans votre terminal SSH)
 
 ```bash
-# Cloner le repo (remplacez USERNAME par votre username GitHub)
+# Cloner le repo
 cd ~
-git clone https://github.com/USERNAME/bob-assistant.git projects/bob
+git clone https://github.com/Riavaas/BoB.git projects/bob
 
 # Aller dans le répertoire
 cd projects/bob
