@@ -73,6 +73,10 @@ async fn piper_say(cfg: &Config, text: &str) -> Result<()> {
         use std::io::Write;
         let mut stdin = child.stdin.take().ok_or_else(|| anyhow!("stdin piper"))?;
         stdin.write_all(text.as_bytes())?;
+        // Piper attend un saut de ligne pour traiter la phrase; sans cela, il peut
+        // rester bloqué en attente d'entrée supplémentaire.
+        stdin.write_all(b"\n")?;
+        stdin.flush()?;
     }
 
     let piper_out = child.stdout.take().ok_or_else(|| anyhow!("stdout piper"))?;
